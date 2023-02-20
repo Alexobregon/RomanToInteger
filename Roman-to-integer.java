@@ -12,6 +12,11 @@ class Solution {
         map.put('D', 500);
         map.put('M', 1000);
         
+        for (int i = 0; i < s.length(); i++) {
+            if (i < s.length() - 1 && map.get(s.charAt(i)) < map.get(s.charAt(i+1))) {
+                result -= map.get(s.charAt(i));
+            }
+        }
         
         
         return 1;
